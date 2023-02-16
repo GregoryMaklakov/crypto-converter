@@ -1,0 +1,24 @@
+@use 'utils' as u;
+
+.crypto-select {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    height: 100%;
+    &__image {
+
+    }
+
+    &__icon {
+        @include u.size(12);
+        fill:#596696;
+    }
+
+    &__cion {
+        
+    }
+}

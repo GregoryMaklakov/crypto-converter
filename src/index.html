@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./scss/style.scss"/>
   </head>
   <body>
+
     <section class="converter">
       <div class="converter__container container">
+
         <form class="converter__form form">
           <p class="form__title">Buy Crypto</p>
 
@@ -20,9 +22,19 @@
             </button>
           </label>
 
-          <span class="form__price price">
-
-          </span>
+          <div class="form__price">
+              <button class="form__price-close">
+                <svg class="form__price-icon" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.34471 0.660599C7.13766 0.453546 6.80319 0.453546 6.59613 0.660599L4 3.25142L1.40387 0.65529C1.19681 0.448237 0.862344 0.448237 0.65529 0.65529C0.448237 0.862344 0.448237 1.19681 0.65529 1.40387L3.25142 4L0.65529 6.59613C0.448237 6.80319 0.448237 7.13766 0.65529 7.34471C0.862344 7.55176 1.19681 7.55176 1.40387 7.34471L4 4.74858L6.59613 7.34471C6.80319 7.55176 7.13766 7.55176 7.34471 7.34471C7.55176 7.13766 7.55176 6.80319 7.34471 6.59613L4.74858 4L7.34471 1.40387C7.54645 1.20212 7.54645 0.862344 7.34471 0.660599V0.660599Z"/>
+                </svg>
+              </button>
+              <div class="form__price-info">
+                <img src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
+                <p class="form__price-text">ETH price:</p>
+                <p class="form__price-meaning">1317,45 USD</p>
+                <img src="./assets/svg/green-arrow.svg" alt="green-arrow">
+              </div>
+          </div>
 
           <label class="form__label form__label--receive"><span class="form__label-title">YOU RECEIVE</span>
             <input class="form__input input input--receive" type="text" placeholder="0.00" readonly>
@@ -36,7 +48,6 @@
             </div>
 
             <span class="select-block">
-              
               <ul class="select-block__list">
                 <li class="select-block__item item-select">
                   <div class="item-select__descr">
@@ -95,7 +106,7 @@
                 </li>
   
   
-                <!--  -->
+                <!-- проверить прокрутку блока -->
   
                 <li class="select-block__item item-select">
                   <div class="item-select__descr">
@@ -162,10 +173,10 @@
             <img class="form__info-icon" src="./assets/svg/info-circle.svg" alt="info">
           </div>
           <button type="submit" class="form__button button">Get Started</button>
-          <div class="form__footer">
+          <a href="#"class="form__footer" target="_blank">
             <div class="form__footer-text">We offset our emissions with Trace. #ClimatePositiveOrganisation</div>
             <img class="form__footer-icon" src="./assets/svg/footer-icon.svg" alt="trace">
-          </div>
+          </a>
         </form>
       </div>
     </section>

@@ -3,11 +3,15 @@
 @use './config/common';
 
 // Components
-//@use './components/';
+@use './components/button';
+@use './components/input';
+@use './components/crypto-secect';
+
+
 
 
 // Blocks
-//@use './blocks/header';
+@use './blocks/form';
 @use './blocks/converter';
 @use './blocks/select-block';
 

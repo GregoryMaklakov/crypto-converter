@@ -28,6 +28,19 @@
         overflow-y: scroll;
         height: 100%;
         padding-right: 24px;
+        position: relative;
+        &::before{
+            content:'';
+            display: block;
+            position: absolute;
+            position: fixed;
+            width: 100%;
+            bottom: 8px;
+            left: 0;
+            right: 0;
+            height: 44px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        }
     }
 
     &__item {

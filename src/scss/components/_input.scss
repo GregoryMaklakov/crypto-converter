@@ -1,0 +1,25 @@
+@use 'utils' as u;
+
+.input {
+    background: #FFFFFF;
+    height: u.rem(56);
+    width: 100%;
+    box-shadow: 0 0 0 1px #EEEEEE;
+    border-radius: 12px;
+    padding: 16px 16px 16px 24px;
+    font-weight: 500;
+    font-size: u.rem(18);
+    color: u.$base-font-color;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 1px #355EFB;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 135%;
+        color: u.$grey-font-color;
+    }
+}
