@@ -1,0 +1,204 @@
+@use '../components/utils' as u;
+
+.converter {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__form {}
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 480px;
+    min-height: 460px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 40px rgba(63, 93, 140, 0.06);
+    border-radius: 20px;
+    position: relative;
+    &__title {
+        font-weight: 500;
+        font-size: u.rem(20);
+        line-height: 135%;
+        color: u.$base-font-color;
+        align-self: center;
+        margin-bottom: 36px;
+    }
+
+    &__label {
+        display: flex;
+        position: relative;
+        &:nth-of-type(1) {
+            margin-bottom: 40px;
+        }
+        &:nth-of-type(2) {
+            margin-bottom: 8px;
+        }
+    }
+    &__label--receive {
+        position: relative;
+    }
+
+    &__label-title {
+        position: absolute;
+        text-transform: uppercase;
+        top: -9px;
+        left: 18px;
+        font-weight: 500;
+        font-size: u.rem(12);
+        color: #596696;
+        display: block;
+        padding: 0px 6px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 43.13%, #FFFFFF 43.82%);
+    }
+
+    &__input {}
+
+    &__curr {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 18px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #0D0856;
+        pointer-events: none;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__info {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: #D79C04;
+        align-items: center;
+        gap: 8px;
+        padding-left: 12px;
+        margin-bottom: 24px;
+    }
+    &__info-icon {
+        
+    }
+    &__button {}
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #fff;
+        background: #052BBD;
+        border-radius: 0px 0px 20px 20px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+    &__footer-text {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-right: 6px;
+    }
+    &__footer-icon {
+        
+    }
+}
+
+.input {
+    background: #FFFFFF;
+    height: u.rem(56);
+    width: 100%;
+    box-shadow: 0 0 0 1px #EEEEEE;
+    border-radius: 12px;
+    padding: 16px 16px 16px 24px;
+    font-weight: 500;
+    font-size: u.rem(18);
+    color: u.$base-font-color;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 1px #355EFB;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 135%;
+        color: u.$grey-font-color;
+    }
+}
+
+.crypto-select {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    height: 100%;
+    &__image {}
+
+    &__icon {
+        @include u.size(12);
+        fill:#596696;
+    }
+
+    &__cion {}
+
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 60px;
+    width: 100%;
+    height: 56px;
+    font-weight: 500;
+    font-size: u.rem(18);
+    border-radius: 12px;
+    //background: linear-gradient(90deg, #143FE2 0%, #072DBF 100%);
+    background: #143FE2;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+    
+    &:disabled {
+        color: u.$grey-blue-color;
+        background: #EEEEEE;
+    }
+    @media (any-hover: hover){
+        &:hover{
+            background: #1743EA;
+        }
+    }
+    &:focus {
+        background: #052BBD;
+    }
+
+}
