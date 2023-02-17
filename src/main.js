@@ -2,16 +2,21 @@
 
 
 const $selectButton = document.querySelector('.crypto-select');
+const $selectBlock = document.querySelector('.select-block');
+
+const label = document.querySelector('.crypto-select__wrp');
+const options = Array.from(document.querySelectorAll('.item-select'));
+
+//замена контента при виборе 
+options.forEach((option) => {
+	option.addEventListener('click', () => {
+		label.textContent = option.textContent;
+        $selectBlock.classList.remove('select-block__active');
+	});
+});
+
 $selectButton.addEventListener('click', (e) => {
     e.preventDefault();
-    const $selectBlock = document.querySelector('.select-block');
     $selectBlock.classList.toggle('select-block__active');
 });
 
-//
-// const $itemSelect = document.querySelector('.item-select');
-
-// $itemSelect.addEventListener('click', () => {
-//    const $inpSelect = document.querySelectorAll('.item-select__checkbox');
-//    console.log($inpSelect);
-// });

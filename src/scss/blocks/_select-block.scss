@@ -2,7 +2,7 @@
 
 
 .select-block { 
-    padding: 10px 8px 10px 16px;
+    padding: 10px 8px 10px 16px;  
     height: 240px;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
@@ -14,13 +14,13 @@
     width: 100%;     
     position: absolute;
     z-index: 5;
-    transform: translateY(-50%) scale(0);
-    transition: transform 0.3s ease 0s;
+    transform: translateY(65px) scaleY(0);
+    transition: transform 0.2s ease 0s;
     &__active {
         visibility: visible;
         opacity: 1;
         display: block;
-        transform: translateY(64px) scale(1);
+        transform: translateY(65px) scaleY(1);
     }
     &__list {
         display: flex;
@@ -40,6 +40,7 @@
             right: 0;
             height: 44px;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+            pointer-events: none;
         }
     }
 
@@ -55,7 +56,18 @@
     justify-content: space-between;
     padding: 10px 0;
     cursor: pointer;
-
+    @media (any-hover: hover){
+        &:hover{
+            .item-select__label {
+                &::before{
+                    border: 1px solid #1743EA;  
+                }
+            }
+        }
+    }
+    &__wrp {
+        display: flex;
+    }
     &__descr {
         display: flex;
         align-items: center;

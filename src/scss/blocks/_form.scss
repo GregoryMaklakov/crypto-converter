@@ -113,13 +113,22 @@
     &__price-icon {
         @include u.size(10px);
         fill: #596696;
-
     }
 
     &__price-info {
         display: flex;
         gap: 6px;
         margin-left: 27px;
+        img {
+            &:nth-of-type(1) {
+                width: 16px;
+                height: 16px;
+            }
+            &:nth-of-type(2) {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
     &__price-text {
