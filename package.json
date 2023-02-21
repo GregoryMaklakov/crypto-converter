@@ -19,5 +19,8 @@
     "@parcel/transformer-sass": "^2.8.0",
     "parcel": "^2.8.0",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "tippy.js": "^6.3.7"
   }
 }

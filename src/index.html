@@ -32,7 +32,7 @@
                 <img src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
                 <p class="form__price-text">ETH price:</p>
                 <p class="form__price-meaning">1317,45 USD</p>
-                <img src="./assets/svg/green-arrow.svg" alt="green-arrow">
+                <img class="form__price-img" src="./assets/svg/green-arrow.svg" alt="green-arrow">
               </div>
           </div>
 
@@ -40,10 +40,12 @@
             <input class="form__input input input--receive" type="text" placeholder="0.00" readonly>
 
             <span class="form__crypto-select crypto-select">
+              <!-- это менять -->
               <div class="crypto-select__wrp" aria-selected="true">
                 <img class="crypto-select__image" src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
                 <span class="crypto-select__cion">ETH</span>
               </div>
+
               <svg class="crypto-select__icon"  viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.23332 0.741675L4.99998 3.97501L1.76665 0.741675C1.44165 0.416675 0.91665 0.416675 0.59165 0.741675C0.26665 1.06667 0.26665 1.59167 0.59165 1.91667L4.41665 5.74167C4.74165 6.06668 5.26665 6.06668 5.59165 5.74167L9.41665 1.91667C9.74165 1.59167 9.74165 1.06667 9.41665 0.741675C9.09165 0.425008 8.55832 0.416675 8.23332 0.741675Z"/>
               </svg>   
@@ -55,11 +57,12 @@
 
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-
-                    <div class="item-select__wrp" > <!-- пробный вариант -->
+              <!--  менять на это-->
+                    <div class="item-select__wrp">
                       <img class="item-select__icon" src="./assets/svg/crypto-coins/Bitcoin.svg" alt="BTC">
-                      <p class="item-select__ticker">BTC</p>
+                      <span class="item-select__ticker">BTC</span>
                     </div>
+
                     <div class="item-select__name">Bitcoin</div>
                   </div>
                   <span class="item-select__radio">
@@ -121,7 +124,7 @@
           
 
           <div class="form__info">Blockchain fee : 0.0003 BTC is included to this quote.
-            <img class="form__info-icon" src="./assets/svg/info-circle.svg" alt="info">
+            <img id="info" class="form__info-icon" src="./assets/svg/info-circle.svg" alt="info">
           </div>
           <button type="submit" class="form__button button">Get Started</button>
           <a href="#"class="form__footer" target="_blank">
