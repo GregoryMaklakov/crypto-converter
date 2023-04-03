@@ -1,26 +1,28 @@
 "use strict";
 
-const $selectButton = document.querySelector(".crypto-select");
-const $selectBlock = document.querySelector(".select-block");
+// Получаем элементы формы
+const $select = document.getElementById("select");
+const $input = document.querySelector(".input--receive");
+const $image = document.querySelector(".crypto-select__image");
+const $ticker = document.querySelector(".crypto-select__coin");
+const $selectItems = document.querySelectorAll(".item-select");
 
-const label = document.querySelector(".crypto-select__wrp");
-const options = Array.from(document.querySelectorAll(".item-select"));
-const itemSelect = document.querySelector(".item-select__wrp");
+// Добавляем обработчик события на клик к выпадающему списку
+document.querySelector(".crypto-select").addEventListener("click", () => {
+  // Показываем список криптовалют
+  $select.classList.toggle("select-block__active");
+});
+// Обновляем содержимое элементов формы
+$selectItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const $itemIcon = item
+      .querySelector(".item-select__icon")
+      .getAttribute("src");
+    const $itemTicker = item.querySelector(".item-select__ticker").textContent;
 
-//замена контента при виборе
-options.forEach((option) => {
-  option.addEventListener("click", (e) => {
-    const clone = e.target.cloneNode(true);
-    label.innerHTML = clone;
-
-    // пока работает это
-    // label.textContent = option.textContent;
-    $selectBlock.classList.remove("select-block__active");
+    $input.placeholder = `0.00 ${$itemTicker}`;
+    $image.setAttribute("src", $itemIcon);
+    $ticker.textContent = $itemTicker;
+    $select.classList.remove("select-block__active");
   });
 });
-
-$selectButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  $selectBlock.classList.toggle("select-block__active");
-});
-

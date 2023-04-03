@@ -2,144 +2,215 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypto converter</title>
-    <link rel="stylesheet" href="./scss/style.scss"/>
+    <link rel="stylesheet" href="./scss/style.scss" />
   </head>
   <body>
-
     <section class="converter">
       <div class="converter__container container">
-
         <form class="converter__form form">
           <p class="form__title">Buy Crypto</p>
 
-          <label class="form__label"><span class="form__label-title">YOU PAY</span>
-            <input class="form__input input" type="text" placeholder="100" >
+          <label class="form__label"
+            ><span class="form__label-title">YOU PAY</span>
+            <input class="form__input input" type="text" placeholder="100" />
             <button class="form__curr">
-              <img src="./assets/images/AUD.png" alt="AUD">
+              <img src="./assets/images/AUD.png" alt="AUD" />
               AUD
             </button>
           </label>
 
           <div class="form__price">
-              <button class="form__price-close">
-                <svg class="form__price-icon" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.34471 0.660599C7.13766 0.453546 6.80319 0.453546 6.59613 0.660599L4 3.25142L1.40387 0.65529C1.19681 0.448237 0.862344 0.448237 0.65529 0.65529C0.448237 0.862344 0.448237 1.19681 0.65529 1.40387L3.25142 4L0.65529 6.59613C0.448237 6.80319 0.448237 7.13766 0.65529 7.34471C0.862344 7.55176 1.19681 7.55176 1.40387 7.34471L4 4.74858L6.59613 7.34471C6.80319 7.55176 7.13766 7.55176 7.34471 7.34471C7.55176 7.13766 7.55176 6.80319 7.34471 6.59613L4.74858 4L7.34471 1.40387C7.54645 1.20212 7.54645 0.862344 7.34471 0.660599V0.660599Z"/>
-                </svg>
-              </button>
-              <div class="form__price-info">
-                <img src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
-                <p class="form__price-text">ETH price:</p>
-                <p class="form__price-meaning">1317,45 USD</p>
-                <img class="form__price-img" src="./assets/svg/green-arrow.svg" alt="green-arrow">
-              </div>
+            <button class="form__price-close">
+              <svg
+                class="form__price-icon"
+                viewBox="0 0 8 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.34471 0.660599C7.13766 0.453546 6.80319 0.453546 6.59613 0.660599L4 3.25142L1.40387 0.65529C1.19681 0.448237 0.862344 0.448237 0.65529 0.65529C0.448237 0.862344 0.448237 1.19681 0.65529 1.40387L3.25142 4L0.65529 6.59613C0.448237 6.80319 0.448237 7.13766 0.65529 7.34471C0.862344 7.55176 1.19681 7.55176 1.40387 7.34471L4 4.74858L6.59613 7.34471C6.80319 7.55176 7.13766 7.55176 7.34471 7.34471C7.55176 7.13766 7.55176 6.80319 7.34471 6.59613L4.74858 4L7.34471 1.40387C7.54645 1.20212 7.54645 0.862344 7.34471 0.660599V0.660599Z"
+                />
+              </svg>
+            </button>
+            <div class="form__price-info">
+              <img src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH" />
+              <p class="form__price-text">ETH price:</p>
+              <p class="form__price-meaning">1317,45 USD</p>
+              <img
+                class="form__price-img"
+                src="./assets/svg/green-arrow.svg"
+                alt="green-arrow"
+              />
+            </div>
           </div>
 
-          <label class="form__label form__label--receive"><span class="form__label-title">YOU RECEIVE</span>
-            <input class="form__input input input--receive" type="text" placeholder="0.00" readonly>
+          <label class="form__label form__label--receive"
+            ><span class="form__label-title">YOU RECEIVE</span>
+            <input
+              class="form__input input input--receive"
+              type="text"
+              placeholder="0.00"
+              readonly
+            />
 
             <span class="form__crypto-select crypto-select">
               <!-- это менять -->
               <div class="crypto-select__wrp" aria-selected="true">
-                <img class="crypto-select__image" src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
-                <span class="crypto-select__cion">ETH</span>
+                <img
+                  class="crypto-select__image"
+                  src="./assets/svg/crypto-coins/Ethereum.svg"
+                  alt="ETH"
+                />
+                <span class="crypto-select__coin">ETH</span>
               </div>
-
-              <svg class="crypto-select__icon"  viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.23332 0.741675L4.99998 3.97501L1.76665 0.741675C1.44165 0.416675 0.91665 0.416675 0.59165 0.741675C0.26665 1.06667 0.26665 1.59167 0.59165 1.91667L4.41665 5.74167C4.74165 6.06668 5.26665 6.06668 5.59165 5.74167L9.41665 1.91667C9.74165 1.59167 9.74165 1.06667 9.41665 0.741675C9.09165 0.425008 8.55832 0.416675 8.23332 0.741675Z"/>
-              </svg>   
+              <svg
+                class="crypto-select__icon"
+                viewBox="0 0 10 6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.23332 0.741675L4.99998 3.97501L1.76665 0.741675C1.44165 0.416675 0.91665 0.416675 0.59165 0.741675C0.26665 1.06667 0.26665 1.59167 0.59165 1.91667L4.41665 5.74167C4.74165 6.06668 5.26665 6.06668 5.59165 5.74167L9.41665 1.91667C9.74165 1.59167 9.74165 1.06667 9.41665 0.741675C9.09165 0.425008 8.55832 0.416675 8.23332 0.741675Z"
+                />
+              </svg>
             </span>
 
             <div class="select-block" id="select">
-
               <div class="select-block__list">
-
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-              <!--  менять на это-->
+                    <!--  менять на это-->
                     <div class="item-select__wrp">
-                      <img class="item-select__icon" src="./assets/svg/crypto-coins/Bitcoin.svg" alt="BTC">
+                      <img
+                        class="item-select__icon"
+                        src="./assets/svg/crypto-coins/Bitcoin.svg"
+                        alt="BTC"
+                      />
                       <span class="item-select__ticker">BTC</span>
                     </div>
 
                     <div class="item-select__name">Bitcoin</div>
                   </div>
                   <span class="item-select__radio">
-                    <input class="item-select__checkbox" type="radio">
+                    <input
+                      class="item-select__checkbox"
+                      type="radio"
+                      name="crypto-select"
+                    />
                     <span class="item-select__label"></span>
                   </span>
                 </label>
 
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-                    <img class="item-select__icon" src="./assets/svg/crypto-coins/Ethereum.svg" alt="ETH">
+                    <img
+                      class="item-select__icon"
+                      src="./assets/svg/crypto-coins/Ethereum.svg"
+                      alt="ETH"
+                    />
                     <p class="item-select__ticker">ETH</p>
                     <div class="item-select__name">Ethereum</div>
                   </div>
                   <span class="item-select__radio">
-                    <input class="item-select__checkbox" type="radio">
+                    <input
+                      class="item-select__checkbox"
+                      type="radio"
+                      name="crypto-select"
+                    />
                     <span class="item-select__label"></span>
                   </span>
                 </label>
 
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-                    <img class="item-select__icon" src="./assets/svg/crypto-coins/USDT.svg" alt="USDT">
+                    <img
+                      class="item-select__icon"
+                      src="./assets/svg/crypto-coins/USDT.svg"
+                      alt="USDT"
+                    />
                     <p class="item-select__ticker">USDT</p>
                     <div class="item-select__name">Tether</div>
                   </div>
                   <span class="item-select__radio">
-                    <input class="item-select__checkbox" type="radio">
+                    <input
+                      class="item-select__checkbox"
+                      type="radio"
+                      name="crypto-select"
+                    />
                     <span class="item-select__label"></span>
                   </span>
                 </label>
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-                    <img class="item-select__icon" src="./assets/svg/crypto-coins/USDC.svg" alt="USDC">
+                    <img
+                      class="item-select__icon"
+                      src="./assets/svg/crypto-coins/USDC.svg"
+                      alt="USDC"
+                    />
                     <p class="item-select__ticker">USDC</p>
                     <div class="item-select__name">Tether</div>
                   </div>
                   <span class="item-select__radio">
-                    <input class="item-select__checkbox" type="radio">
+                    <input
+                      class="item-select__checkbox"
+                      type="radio"
+                      name="crypto-select"
+                    />
                     <span class="item-select__label"></span>
                   </span>
                 </label>
 
                 <label class="select-block__item item-select" role="option">
                   <div class="item-select__descr">
-                    <img class="item-select__icon" src="./assets/svg/crypto-coins/DAI.svg" alt="DAI">
+                    <img
+                      class="item-select__icon"
+                      src="./assets/svg/crypto-coins/DAI.svg"
+                      alt="DAI"
+                    />
                     <p class="item-select__ticker">DAI</p>
                     <div class="item-select__name">DAI</div>
                   </div>
                   <span class="item-select__radio">
-                    <input class="item-select__checkbox" type="radio">
+                    <input
+                      class="item-select__checkbox"
+                      type="radio"
+                      name="crypto-select"
+                    />
                     <span class="item-select__label"></span>
                   </span>
                 </label>
-
               </div>
             </div>
           </label>
-          
 
-          <div class="form__info">Blockchain fee : 0.0003 BTC is included to this quote.
-            <img id="info" class="form__info-icon" src="./assets/svg/info-circle.svg" alt="info">
+          <div class="form__info">
+            Blockchain fee : 0.0003 BTC is included to this quote.
+            <img
+              id="info"
+              class="form__info-icon"
+              src="./assets/svg/info-circle.svg"
+              alt="info"
+            />
           </div>
           <button type="submit" class="form__button button">Get Started</button>
-          <a href="#"class="form__footer" target="_blank">
-            <div class="form__footer-text">We offset our emissions with Trace. #ClimatePositiveOrganisation</div>
-            <img class="form__footer-icon" src="./assets/svg/footer-icon.svg" alt="trace">
+          <a href="#" class="form__footer" target="_blank">
+            <div class="form__footer-text">
+              We offset our emissions with Trace. #ClimatePositiveOrganisation
+            </div>
+            <img
+              class="form__footer-icon"
+              src="./assets/svg/footer-icon.svg"
+              alt="trace"
+            />
           </a>
         </form>
       </div>
     </section>
 
     <!-- SVG -->
-    <svg style="display: none;">
-    
-    </svg>
-    <!-- Script --> 
+    <svg style="display: none"></svg>
+    <!-- Script -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

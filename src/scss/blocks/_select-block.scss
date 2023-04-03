@@ -1,140 +1,133 @@
-@use '../components/utils' as u;
+@use "../components/utils" as u;
 
-
-.select-block { 
-    padding: 10px 8px 10px 16px;  
-    height: 240px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-    box-shadow: 0px 0px 60px 6px rgba(13, 8, 86, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    width: 100%;     
-    position: absolute;
-    z-index: 5;
-    transform: translateY(65px) scaleY(0);
-    transition: transform 0.2s ease 0s;
-    &__active {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-        transform: translateY(65px) scaleY(1);
+.select-block {
+  padding: 10px 8px 10px 16px;
+  height: 240px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 0px 60px 6px rgba(13, 8, 86, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  transform: translateY(65px) scaleY(0);
+  transition: transform 0.2s ease 0s;
+  &__active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transform: translateY(65px) scaleY(1);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    padding-right: 24px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      position: fixed;
+      width: 100%;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      height: 44px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #ffffff 100%
+      );
+      pointer-events: none;
     }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        overflow-y: scroll;
-        height: 100%;
-        padding-right: 24px;
-        position: relative;
-        &::before{
-            content:'';
-            display: block;
-            position: absolute;
-            position: fixed;
-            width: 100%;
-            bottom: 8px;
-            left: 0;
-            right: 0;
-            height: 44px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-            pointer-events: none;
-        }
-    }
-
-    &__item {
-        
-    }
+  }
 }
 
 .item-select {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  cursor: pointer;
+  @media (any-hover: hover) {
+    &:hover {
+      .item-select__label {
+        &::before {
+          border: 1px solid #1743ea;
+        }
+      }
+    }
+  }
+  &__wrp {
     display: flex;
-    width: 100%;
+  }
+  &__descr {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__ticker {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #0d0856;
+    margin-right: 10px;
+    min-width: 40px;
+  }
+
+  &__label {
     cursor: pointer;
-    @media (any-hover: hover){
-        &:hover{
-            .item-select__label {
-                &::before{
-                    border: 1px solid #1743EA;  
-                }
-            }
-        }
+    position: relative;
+    transition: all 0.2s linear 0s;
+    &::before {
+      content: "";
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #b1b0bd;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease 0s;
     }
-    &__wrp {
-        display: flex;
+    &::after {
+      content: "";
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1743ea;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: scale(0);
+      transition: all 0.2s ease 0s;
     }
-    &__descr {
-        display: flex;
-        align-items: center;
-    }
+  }
 
-    &__icon {
-        margin-right: 10px;
+  &__checkbox {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:checked + .item-select__label {
+      &::after {
+        transform: scale(1) translateY(-50%) translateX(-50%);
+      }
+      &::before {
+        border: 1px solid #1743ea;
+      }
     }
-
-    &__ticker {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 140%;
-        color: #0D0856;
-        margin-right: 10px;
-        min-width: 40px;
-    }
-
-    &__name {
-    }
-    &__radio {
-    }
-
-    &__label {
-        cursor: pointer;
-        position: relative;
-        transition: all 0.2s linear 0s;
-        &::before{
-            content:'';
-            content: "";
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid #B1B0BD;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 0.3s ease 0s;
-        }
-        &::after{
-            content: "";
-            top: 50%;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #1743EA;
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: scale(0) ;
-            transition: all 0.2s ease 0s;
-        }
-    }
-    
-
-    &__checkbox {
-        opacity: 0;
-        height: 0;
-        width: 0;
-        &:checked + .item-select__label {
-            &::after{
-                transform: scale(1) translateY(-50%)translateX(-50%);
-            }
-            &::before{
-                border: 1px solid #1743EA;
-            }
-        }
-    }
+  }
 }
