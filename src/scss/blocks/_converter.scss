@@ -1,20 +1,11 @@
-@use '../components/utils' as u;
+@use "../components/utils" as u;
 
 .converter {
-    height: 100vh;
+  height: 100vh;
+  display: flex;
+  &__container {
     display: flex;
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-    &__form {}
+    align-items: center;
+    justify-content: center;
+  }
 }
-
-
-
-
-
-
-
